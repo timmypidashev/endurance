@@ -7,5 +7,9 @@ __license__ = "MIT"
 __version__ = "0.1.0-rc1"
 __status__ = "Prototype"
 
+import argparse
+import shutil
+
 def run_as_module():
-    print(__description__)
+    columns = shutil.get_terminal_size().columns
+    print(__description__.center(columns))
